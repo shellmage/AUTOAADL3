@@ -134,13 +134,13 @@ form {
 }
 
 .logs {
-  background-color: rgb(216 69 69 / 44%);
+  background-color: rgba(240, 240, 100, 0.44);
   padding: 30px 30px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  color: rgb(216 69 69);
+  color: black;
   max-height: 300px;
   overflow-y: scroll;
 }
