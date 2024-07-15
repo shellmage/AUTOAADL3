@@ -1,7 +1,7 @@
 const APP_TOKEN = "qaLYa*wMw)4A.FxM";
 const BASE_URL =
   "https://aadl3inscription2024.dz/AR/Inscription-AndroidiOS.php";
-const TIMEOUT = 10 * 1000; // 10 seconds
+const TIMEOUT = 20 * 1000; // 20 seconds
 
 const submitButton = document.getElementById("submit");
 
@@ -14,13 +14,13 @@ function addLogEntry(message) {
   logsDetails.appendChild(logItem);
 }
 
-const APICall = async (headers, payload, i) => {
+const APICall = async (headers, encodedPayload, i) => {
   return new Promise(async (resolve, reject) => {
     try {
       const res = await fetch(BASE_URL, {
         method: "POST",
         headers,
-        body: new URLSearchParams(payload),
+        body: encodedPayload.replace('*', '%2A'),
         signal: AbortSignal.timeout(TIMEOUT),
       });
 
@@ -110,6 +110,9 @@ submitButton.addEventListener("click", async (event) => {
     payload.append(key, data[key]);
   });
 
+  // URL-encode payload
+   let encodedPayload = new URLSearchParams(payload).toString();
+
   // Calculate content-length based on the length of P1
   const content_length = data.P1.length === 1 ? "80" : "81";
 
@@ -125,7 +128,7 @@ submitButton.addEventListener("click", async (event) => {
   let i = 1;
   while (i > 0) {
     document.getElementById("submit").innerHTML = "En Cours... " + i;
-    await APICall(headers, payload, i)
+    await APICall(headers, encodedPayload, i)
       .then((response) => {
         // Handle response
         let err = handleResponse(response);
