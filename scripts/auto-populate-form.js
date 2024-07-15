@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       phone.value = storedData.P4 || "";
 
       submitButton.disabled = true;
-      initButton.disabled = true;
     }
   }
 
