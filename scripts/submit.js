@@ -102,6 +102,12 @@ submitButton.addEventListener("click", async (event) => {
     P5: APP_TOKEN,
   };
 
+  // Disable input fields
+  wilaya.disabled = true;
+  nin.disabled = true;
+  nss.disabled = true;
+  phone.disabled = true;
+
   // Save data to localstorage
   localStorage.setItem("formData", JSON.stringify(data));
 
