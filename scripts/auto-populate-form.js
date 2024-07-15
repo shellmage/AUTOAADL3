@@ -10,14 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function populateFieldsFromLocalStorage() {
     const storedData = JSON.parse(localStorage.getItem("formData"));
     if (storedData) {
-      wilaya.value = storedData.P1 || "";
+      wilaya.selectedIndex = "";
       nin.value = storedData.P2 || "";
       nss.value = storedData.P3 || "";
       phone.value = storedData.P4 || "";
 
-      submitButton.disabled = false;
-      initButton.disabled = false;
-    } else {
       submitButton.disabled = true;
       initButton.disabled = true;
     }
