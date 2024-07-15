@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const wilayaValid = wilayaSelect.value !== "";
     const ninValid = /^\d{18}$/.test(ninInput.value);
     const nssValid = /^\d{12}|^\d{6}$/.test(nssInput.value);
-    const phoneValid = /^\d{10}$/.test(phoneInput.value);
+    const phoneValid = /^0[5,6,7]\d{8}$/.test(phoneInput.value);
 
     if (!wilayaValid) {
       wilayaSelect.style.border = "2px solid rgb(216 69 69)";
