@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <title>Auto AADL3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1 id="logo">Auto AADL3</h1>
+      <!-- <button class="init-data" id="init">Réinitialiser</button> -->
+    </div>
+
+    <div class="success-box" id="success-box"> </div>
+
+    <div class="form" id="form">
+      <form action="" method="POST">
+          <div class="field">
+            <label for="wilaya" class="label">Wilaya</label>
+            <select id="wilaya" class="select-box">
+              <option value="" disabled selected >Choisir votre wilaya</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="nin" class="label">NIN </label>
+            <input
+              type="tel"
+              name="P2"
+              id="nin"
+              placeholder="980600001337000017"
+              class="input"
+            />
+          </div>
+          <div class="field">
+            <label for="nss" class="label">NSS </label>
+            <input
+              type="tel"
+              name="P3"
+              id="nss"
+              placeholder="990001337000"
+              class="input"
+            />
+          </div>
+          <div class="field">
+            <label for="phone" class="label">Numéro de téléphone </label>
+            <input
+              type="tel"
+              name="P4"
+              id="phone"
+              placeholder="0555555555"
+              class="input"
+            />
+          </div>
+          <div class="footer">
+            <div class="buttons">
+              <button id="init" class="button" disabled>Réinitialiser</button>
+              <button id="submit" class="button" disabled>Commencer</button>
+            </div>
+            <span class="note">Veuillez entrer des coordonnées valides.</span>
+          </div>
+      </form>
+    </div>
+
+    <div class="hrline"></div>
+
+    <div class="logs">
+     <h3 class="logs-title">Données du journal des requêtes</h3>
+     <ul class="logs-details" id="logs-details">
+      <li>Veuillez remplir le formulaire et cliquer sur le bouton "Commencer" pour pouvoir envoyer vos requêtes.</li>
+    </ul>
+    </div>
+  </div>
+
+
+  <script src="scripts/wilaya-populate.js"></script>
+  <script src="scripts/auto-populate-form.js"></script>
+  <script src="scripts/validation.js"></script>
+  <script src="scripts/submit.js"></script>
+  <script src="scripts/init-form.js"></script>
+  <!-- <script src="scripts/parse-response.js"></script> -->
+</body>
+</html>
