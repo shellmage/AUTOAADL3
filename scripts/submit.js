@@ -1,7 +1,7 @@
 const APP_TOKEN = "qaLYa*wMw)4A.FxM";
 const BASE_URL =
   "https://aadl3inscription2024.dz/AR/Inscription-AndroidiOS.php";
-const TIMEOUT = 20 * 1000; // 20 seconds
+const TIMEOUT = 15 * 1000; // 15 seconds
 
 const submitButton = document.getElementById("submit");
 
@@ -127,7 +127,7 @@ submitButton.addEventListener("click", async (event) => {
     "accept-encoding": "gzip",
     "content-length": content_length,
     "content-type": "application/x-www-form-urlencoded; charset=utf-8",
-    host: "aadl3inscription2024.dz",
+    "host": "aadl3inscription2024.dz",
     "user-agent": "Dart/3.4 (dart:io)",
   };
 
