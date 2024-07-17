@@ -69,7 +69,6 @@ const handleResponse = (text) => {
     const matchGroup = text.match(/{(.*?)}/);
     const jsonData = matchGroup[0];
     const errorMessage = `Erreur: ${jsonData}`;
-    alert(errorMessage);
     return errorMessage;
   }
 };
