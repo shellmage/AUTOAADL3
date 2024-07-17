@@ -1,8 +1,8 @@
 :root {
   /* FONT STYLES */
-  --font-size-big: 50px;
-  --font-size-medium: 25px;
-  --font-size-small: 18px;
+  --font-size-big: 60px;
+  --font-size-medium: 30px;
+  --font-size-small: 20px;
   --font-weight-bold: 600;
   --font-family: "Inter", Arial, Helvetica, sans-serif;
   /* COLOR STYLES */
@@ -29,7 +29,7 @@ body {
 }
 
 .wrapper {
-  padding: 48px 0;
+  padding: 48px 20px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -41,7 +41,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .header h1 {
@@ -63,7 +63,7 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 26px;
 }
 
 .label {
@@ -71,7 +71,7 @@ form {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-medium);
   color: var(--primary-color);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .input,
@@ -125,8 +125,8 @@ form {
   opacity: 0.5;
 }
 
-.note {
-  color: var(--dark-heading-color);
+#note {
+  color: rgb(216 69 69);
 }
 
 .hrline {
@@ -164,6 +164,14 @@ form {
 
 .logs-details li .timestamp {
   font-weight: var(--font-weight-bold);
+}
+
+.footer {
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 30px;
+  text-align: center;
 }
 
 /* Adjust width for medium screens */
