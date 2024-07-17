@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const phoneInput = document.getElementById("phone");
   const submitButton = document.getElementById("submit");
   const initButton = document.getElementById("init");
+  const note = document.getElementById("note");
 
   const validateForm = () => {
     // Enable init form data button
     initButton.disabled = false;
+    note.style.display = "none";
 
     wilayaSelect.style.border = "2px solid #a096a6eb";
     ninInput.style.border = "2px solid #a096a6eb";
@@ -23,15 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!wilayaValid) {
       wilayaSelect.style.border = "2px solid rgb(216 69 69)";
+      note.style.display = "block";
     }
     if (!ninValid) {
       ninInput.style.border = "2px solid rgb(216 69 69)";
+      note.style.display = "block";
     }
     if (!nssValid) {
       nssInput.style.border = "2px solid rgb(216 69 69)";
+      note.style.display = "block";
     }
     if (!phoneValid) {
       phoneInput.style.border = "2px solid rgb(216 69 69)";
+      note.style.display = "block";
     }
 
     submitButton.disabled = !(
