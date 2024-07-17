@@ -9,7 +9,7 @@ const populateSelectBox = (wilayas) => {
   });
 };
 // Fetch the JSON data and populate the select box
-fetch("../assets/wilaya.json")
+fetch("/AUTOAADL3/assets/wilaya.json")
   .then((response) => response.json())
   .then((wilayas) => {
     populateSelectBox(wilayas);
