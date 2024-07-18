@@ -14,7 +14,7 @@ Start your google chrome browser in security disabled mode following this tutori
 1 - Download this [bash script](https://raw.githubusercontent.com/shellmage/AUTOAADL3/master/AUTOAADL3.sh), or copy paste it into a file name "AUTOAADL3.sh":<br>
 ```bash
 #!/usr/bin/env bash
-google-chrome-stable --disable-web-security  --user-data-dir="~/.AADL3-chrome-nocors" &
+google-chrome-stable --disable-web-security  --user-data-dir="~/.AADL3-chrome-nocors" https://shellmage.github.io/AUTOAADL3/ &
 exit
 
 ```
